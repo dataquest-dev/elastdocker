@@ -7,6 +7,7 @@ network.host: 0.0.0.0
 transport.host: 0.0.0.0
 
 ## Cluster Settings
+discovery.type: single-node
 discovery.seed_hosts: ${ELASTIC_DISCOVERY_SEEDS}
 cluster.initial_master_nodes: ${ELASTIC_INIT_MASTER_NODE}
 
