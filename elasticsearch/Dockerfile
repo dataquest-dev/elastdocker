@@ -4,7 +4,8 @@ ARG ELK_VERSION
 FROM docker.elastic.co/elasticsearch/elasticsearch:${ELK_VERSION}
 
 RUN echo "still not running"
-RUN echo -e "\nvm.max_map_count = 262144\n" >> /etc/sysctl.d/99-sysctl.conf
+RUN sysctl --w vm.max_map_count=262144
+# RUN echo -e "\nvm.max_map_count = 262144\n" >> /etc/sysctl.d/99-sysctl.conf
 
 # Add healthcheck
 COPY elasticsearch/scripts/docker-healthcheck .
