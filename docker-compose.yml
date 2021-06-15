@@ -39,7 +39,7 @@ services:
       ELASTIC_NODE_NAME: ${ELASTIC_NODE_NAME}
       ELASTIC_INIT_MASTER_NODE: ${ELASTIC_INIT_MASTER_NODE}
       ELASTIC_DISCOVERY_SEEDS: ${ELASTIC_DISCOVERY_SEEDS}
-      ES_JAVA_OPTS: -Xmx${ELASTICSEARCH_HEAP} -Xms${ELASTICSEARCH_HEAP} -Des.enforce.bootstrap.checks=true
+      ES_JAVA_OPTS: -Xmx${ELASTICSEARCH_HEAP} -Xms${ELASTICSEARCH_HEAP}
       bootstrap.memory_lock: "true"
     volumes:
       - elasticsearch-data:/usr/share/elasticsearch/data

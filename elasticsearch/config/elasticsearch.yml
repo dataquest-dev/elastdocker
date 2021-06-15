@@ -8,14 +8,14 @@ transport.host: 0.0.0.0
 
 ## Cluster Settings
 discovery.type: single-node
-discovery.seed_hosts: ${ELASTIC_DISCOVERY_SEEDS}
-cluster.initial_master_nodes: ${ELASTIC_INIT_MASTER_NODE}
+#discovery.seed_hosts: ${ELASTIC_DISCOVERY_SEEDS}
+#cluster.initial_master_nodes: ${ELASTIC_INIT_MASTER_NODE}
 
 ## License
 xpack.license.self_generated.type: basic
 
 # Security
-xpack.security.enabled: true
+#xpack.security.enabled: true
 
 ## - ssl
 #xpack.security.transport.ssl.enabled: true
@@ -32,4 +32,4 @@ xpack.security.enabled: true
 #xpack.security.http.ssl.client_authentication: optional
 
 # Monitoring
-xpack.monitoring.collection.enabled: false
+#xpack.monitoring.collection.enabled: false
