@@ -14,6 +14,9 @@ discovery.type: single-node
 ## License
 xpack.license.self_generated.type: basic
 
+## Backup Repo
+path.repo: ["/home/backup"]
+
 # Security
 #xpack.security.enabled: true
 
