@@ -9,5 +9,4 @@ RUN mkdir /home/backup && \
 
 
 # Add healthcheck
-COPY scripts/docker-healthcheck .
 HEALTHCHECK CMD sh ./docker-healthcheck
