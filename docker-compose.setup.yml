@@ -9,6 +9,7 @@ services:
     command: bash /setup/setup-keystore.sh
     user: "0"
     volumes:
+        - ./elasticsearch/scripts/docker-healthcheck:/usr/share/elasticsearch/docker-healthcheck:ro
         - ./secrets:/secrets
         - ./setup/:/setup/
     environment:
@@ -25,5 +26,6 @@ services:
     command: bash /setup/setup-certs.sh
     user: "0"
     volumes:
+      - ./elasticsearch/scripts/docker-healthcheck:/usr/share/elasticsearch/docker-healthcheck:ro
       - ./secrets:/secrets
       - ./setup/:/setup/
