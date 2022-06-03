@@ -1,8 +1,8 @@
 ARG ELK_VERSION
-ARG DOCKER_COMPOSE_WAIT_VERSION
 
 # https://github.com/elastic/elasticsearch-docker
 FROM docker.elastic.co/elasticsearch/elasticsearch:${ELK_VERSION}
+ARG DOCKER_COMPOSE_WAIT_VERSION
 ENV DEBIAN_FRONTEND=noninteractive
 
 # wait installation script
