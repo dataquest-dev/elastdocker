@@ -1,8 +1,13 @@
 ARG ELK_VERSION
+ARG DOCKER_COMPOSE_WAIT_VERSION
 
 # https://github.com/elastic/elasticsearch-docker
 FROM docker.elastic.co/elasticsearch/elasticsearch:${ELK_VERSION}
 ENV DEBIAN_FRONTEND=noninteractive
+
+# wait installation script
+ADD https://github.com/ufoscout/docker-compose-wait/releases/download/${DOCKER_COMPOSE_WAIT_VERSION}/wait /wait
+RUN chmod +x /wait
 
 # create backup directory
 RUN mkdir /home/backup && \
